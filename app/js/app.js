@@ -2,12 +2,12 @@
 
 /* App Module */
 
-var phonecatApp = angular.module('phonecatApp', [
+var registryApp = angular.module('registryApp', [
   'ngRoute',
-  'phonecatControllers'
+  'registryControllers'
 ]);
 
-phonecatApp.config(['$routeProvider',
+registryApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/gifts', {

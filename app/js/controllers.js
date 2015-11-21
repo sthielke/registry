@@ -2,9 +2,9 @@
 
 /* Controllers */
 
-var phonecatControllers = angular.module('phonecatControllers', []);
+var registryControllers = angular.module('registryControllers', []);
 
-phonecatControllers.controller('giftListCtrl', ['$scope', '$http',
+registryControllers.controller('giftListCtrl', ['$scope', '$http',
   function($scope, $http) {
     $http.get('gifts/gifts.json').success(function(data) {
       $scope.gifts = data;
@@ -14,12 +14,12 @@ phonecatControllers.controller('giftListCtrl', ['$scope', '$http',
     $scope.orderProp = 'id';
   }]);
 
-phonecatControllers.controller('suggestSongCtrl', ['$scope', '$routeParams',
+registryControllers.controller('suggestSongCtrl', ['$scope', '$routeParams',
   function($scope, $routeParams) {
     $scope.phoneId = $routeParams.phoneId;
   }]);
 
-phonecatControllers.controller('receptionInfoCtrl', ['$scope', 
+registryControllers.controller('receptionInfoCtrl', ['$scope', 
   function($scope){
   	$scope.map = data;
 }])
